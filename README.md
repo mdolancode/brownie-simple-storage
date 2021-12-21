@@ -1,6 +1,6 @@
 # brownie-simple-storage
-freecodecamp - Lesson 5 - Brownie Simple Storage Smart Contract
 
+## Lesson 5
 1. Set up project using Brownie.
 2. Deploy smart contract using Brownie to local Ganache.
 3. Three ways to add accounts 
