@@ -1,5 +1,4 @@
-from brownie import accounts
-import os
+from brownie import accounts, config
 
 
 def deploy_simple_storage():
@@ -12,7 +11,7 @@ def deploy_simple_storage():
     # print(account)
 
     # This works for env varibales and yaml.
-    account = accounts.add(os.getenv("PRIVATE_KEY"))
+    account = accounts.add(config["wallets"]["from_key"])
     print(account)
 
 
