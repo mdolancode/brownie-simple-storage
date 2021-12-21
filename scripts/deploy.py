@@ -1,18 +1,11 @@
-from brownie import accounts, config
+from brownie import accounts, config, SimpleStorage
 
 
 def deploy_simple_storage():
     # This works ONLY for local Ganache chains.
-    # account = accounts[0]
-    # print(account)
-
-    # This works for encrypted Private Keys.
-    # account = accounts.load("freecodecamp-account")
-    # print(account)
-
-    # This works for env varibales and yaml.
-    account = accounts.add(config["wallets"]["from_key"])
-    print(account)
+    account = accounts[0]
+    simple_storage = SimpleStorage.deploy({"from": account})
+    print(simple_storage)
 
 
 def main():
